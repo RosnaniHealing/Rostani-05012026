@@ -11,7 +11,7 @@ const App: React.FC = () => {
   const Logo = ({ className = "h-8" }: { className?: string }) => (
     <div className={`flex items-center ${className}`}>
       <img 
-        src="/resources/logo.png" 
+        src="/resources/Logo.png" 
         alt="Rostani Logo" 
         className="h-full w-auto object-contain"
         onError={(e) => {
