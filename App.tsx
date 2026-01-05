@@ -183,7 +183,7 @@ const App: React.FC = () => {
                 
                 <div className="relative rounded-[2.5rem] rounded-tr-[10rem] overflow-hidden shadow-2xl transition-all duration-700 group-hover:shadow-rostani-sage/30">
                   <img 
-                    src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&q=80" 
+                    src="/resources/profile01.jpg" 
                     alt="Shadi Servat - Founder"
                     className="w-full h-[500px] object-cover object-top transition-transform duration-1000 group-hover:scale-105"
                   />
