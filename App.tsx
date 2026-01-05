@@ -9,9 +9,9 @@ const App: React.FC = () => {
 
   // Logo Component for reuse
   const Logo = ({ className = "h-8" }: { className?: string }) => (
-    <div className={`flex items-center gap-3 ${className}`}>
+    <div className={`flex items-center ${className}`}>
       <img 
-        src="https://raw.githubusercontent.com/shadservat/rostani-assets/main/logo.png" 
+        src="/resources/logo.png" 
         alt="Rostani Logo" 
         className="h-full w-auto object-contain"
         onError={(e) => {
@@ -19,7 +19,6 @@ const App: React.FC = () => {
           e.currentTarget.style.display = 'none';
         }}
       />
-      <span className="text-xl font-playfair font-bold text-rostani-dark-sage tracking-tighter">ROSTANI.</span>
     </div>
   );
 
