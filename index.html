@@ -1,39 +1,273 @@
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rostani Integrative Health | Where Science Meets Soul</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            'rostani-cream': '#FFFDF5',
-            'rostani-slate': '#2F3E46',
-            'rostani-sage': '#84A98C',
-            'rostani-dark-sage': '#52796F',
-            'rostani-deep-slate': '#354F52',
-          },
-          fontFamily: {
-            playfair: ['"Playfair Display"', 'serif'],
-            lato: ['Lato', 'sans-serif'],
-          }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <title>Rostani | Integrative Health</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- COLOR PALETTE --- */
+        :root {
+            --bg-body: #FDFCF8;       /* سفیدِ گرم */
+            --text-main: #2C3E50;
+            --accent-primary: #4A6741; /* سبز سدریِ زنده */
+            --accent-light: #E9F1EA;   /* سبز خیلی روشن */
+            --gold: #C5A065;          /* طلایی */
         }
-      }
-    }
-  </script>
-  <style>
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Lato', sans-serif; background-color: #FFFDF5; color: #2F3E46; }
-    .glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); }
-  </style>
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            font-family: 'Montserrat', sans-serif; 
+            background-color: var(--bg-body); 
+            color: var(--text-main); 
+            line-height: 1.8; 
+        }
+
+        h1, h2, h3, h4 { 
+            font-family: 'Cormorant Garamond', serif; 
+            color: var(--accent-primary); 
+            font-weight: 600;
+        }
+        
+        h2 { font-size: 2.5rem; text-align: center; margin-bottom: 20px; }
+        .section-padding { padding: 100px 0; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+        a { text-decoration: none; transition: 0.3s; }
+
+        /* --- Buttons --- */
+        .btn {
+            display: inline-block;
+            padding: 12px 35px;
+            background-color: var(--accent-primary);
+            color: white;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+        .btn:hover { background-color: var(--gold); transform: translateY(-2px); }
+        
+        .btn-outline {
+            padding: 10px 25px;
+            border: 1px solid var(--accent-primary);
+            color: var(--accent-primary);
+            border-radius: 50px;
+            font-size: 0.8rem;
+        }
+        .btn-outline:hover { background-color: var(--accent-primary); color: white; }
+
+        /* --- Hero Section (Minimal Nature) --- */
+        .hero {
+            height: 90vh;
+            /* تصویر جوانه مینیمال */
+            background: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.4)), url('resources/NaturePlants.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .hero-content { background: rgba(255, 255, 255, 0.8); padding: 40px; border-radius: 8px; backdrop-filter: blur(5px); }
+        .hero h1 { font-size: 4rem; margin-bottom: 10px; }
+        .hero p { font-size: 1.2rem; color: #444; margin-bottom: 30px; font-weight: 400; }
+
+        /* --- Philosophy & Method --- */
+        .method-section { background: white; padding: 60px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.03); margin-top: -50px; position: relative; z-index: 10; }
+        .method-text p { margin-bottom: 15px; color: #555; text-align: justify; }
+
+        /* --- Services --- */
+        .services-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 40px; }
+        .service-card {
+            background: white; padding: 40px; border-radius: 12px; border: 1px solid #eee;
+            transition: 0.3s; display: flex; flex-direction: column;
+        }
+        .service-card:hover { box-shadow: 0 15px 40px rgba(0,0,0,0.05); border-color: var(--accent-primary); }
+        .price-box { background: var(--accent-light); padding: 15px; border-radius: 8px; margin: 20px 0; font-size: 0.9rem; color: var(--accent-primary); font-weight: 600; }
+
+        /* --- Founder --- */
+        .founder-section { background-color: #F3F4F1; }
+        .founder-layout { display: grid; grid-template-columns: 1fr 2fr; gap: 40px; align-items: center; }
+        .founder-img {
+            height: 350px; width: 100%;
+            background-image: url('YOUR_PHOTO_URL_HERE'); /* عکس خودت */
+            background-size: cover; background-position: center; border-radius: 8px;
+        }
+
+        /* --- Academy --- */
+        .academy-intro { text-align: center; max-width: 700px; margin: 0 auto 40px; }
+        .academy-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .academy-card {
+            background: white; padding: 30px; border-radius: 12px; text-align: center; border-top: 4px solid var(--gold);
+        }
+        .academy-card h4 { font-size: 1.1rem; margin-bottom: 10px; }
+        .academy-card ul { text-align: left; list-style: inside; font-size: 0.85rem; color: #666; margin-bottom: 20px; }
+
+        /* --- FAQ --- */
+        .faq-section { max-width: 800px; margin: 0 auto; }
+        details { background: white; margin-bottom: 10px; padding: 15px; border-radius: 8px; cursor: pointer; border-left: 4px solid var(--accent-primary); }
+        summary { font-weight: 600; }
+        details p { font-size: 0.9rem; color: #555; margin-top: 10px; }
+
+        /* Footer */
+        footer { text-align: center; padding: 40px; background: var(--accent-primary); color: white; font-size: 0.8rem; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .services-grid, .founder-layout, .academy-grid { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
-<body class="antialiased">
-  <div id="root"></div>
-  <script type="module" src="/index.tsx"></script>
+<body>
+
+    <!-- 1. HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Rostani</h1>
+            <p>Where Science Meets Soul.<br>Integrative Health for Mind, Body & Energy.</p>
+            <a href="#services" class="btn">Begin Your Journey</a>
+        </div>
+    </section>
+
+    <!-- 2. PHILOSOPHY & METHOD -->
+    <div class="container method-section">
+        <h2 class="text-center">The Holographic Approach</h2>
+        <div class="method-text">
+            <p>Modern medicine often treats the symptom, not the system. But we believe that true healing requires total alignment.</p>
+            <p><strong>Think about it:</strong> You cannot silence a racing Mind if your Energy field is congested. You cannot elevate your Spirit if your Body is inflamed. You cannot build a new future (Will) if your Environment is draining you.</p>
+            <p>At <strong>Rostani</strong>, we don’t just "fix" parts. We integrate your entire existence through specialized departments, ensuring no part of you is left behind.</p>
+        </div>
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="holographic-approach.html" class="btn-outline">More</a>
+        </div>
+    </div>
+
+    <!-- 3. SERVICES (ACTIVE) -->
+    <section id="services" class="section-padding">
+        <div class="container">
+            <h2>Clinical Pathways</h2>
+            <div class="services-grid">
+                
+                <!-- Service 1: Psychology -->
+                <div class="service-card">
+                    <h3>🧠 Mind & Will</h3>
+                    <p><strong>Integrative Private Sessions</strong></p>
+                    <p>Fluid sessions combining Psychotherapy (Root Cause) and Coaching (Future Action).</p>
+                    
+                    <div class="price-box">
+                        • Single Session: $55<br>
+                        • Monthly Package: $180 (4 Sessions)
+                    </div>
+                    
+                    <!-- لینک رزرو کوچینگ -->
+                    <a href="https://api.leadconnectorhq.com/widget/bookings/psychology/coaching-rostani" class="btn" style="text-align: center;">Book Session</a>
+
+                </div>
+
+                <!-- Service 2: Energy -->
+                <div class="service-card">
+                    <h3>⚡ Energy & Vitality</h3>
+                    <p><strong>Remote Pranic Healing</strong></p>
+                    <p>Clearing energetic blocks and recharging your bio-field without physical contact.</p>
+                    
+                    <div class="price-box">
+                        • Single Reset: $16<br>
+                        • 21-Session Deep Cleanse: $290
+                    </div>
+
+                    <!-- لینک رزرو انرژی -->
+                    <a href="https://api.leadconnectorhq.com/widget/bookings/pranicenergyhealing-rostani" class="btn" style="text-align: center;">Start Healing</a>
+                    <a href="energy-faq.html" class="btn-outline" style="margin-top: 10px;">FAQ</a>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. FOUNDER -->
+    <section class="founder-section section-padding">
+        <div class="container founder-layout">
+            <!-- عکس خودت -->
+            <div class="founder-img"></div>
+            <div>
+                <h2>The Founder</h2>
+                <h3>Shadi Servat</h3>
+                <p><strong>Psychologist (M.A.) | ICF Coach | Pranic Healer</strong></p>
+                <p>I founded Rostani to bridge the gap between clinical science and ancient wisdom. My mission is to help you decode your unique holographic pattern.</p>
+                <br>
+                <a href="#" class="btn-outline">More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. ACADEMY (ساختار جدید) -->
+    <section class="section-padding" style="background: white;">
+        <div class="container">
+            <h2>Rostani Academy</h2>
+            <p class="academy-intro">The Library of Wholeness. Explore our departments.</p>
+            
+            <div class="academy-grid">
+                
+                <div class="academy-card">
+                    <h4>🧠 Mind & Psychology</h4>
+                    <ul>
+                        <li>Jungian Archetypes</li>
+                        <li>Personality Decoding</li>
+                    </ul>
+                    <a href="#" class="btn-outline">Explore</a>
+                </div>
+
+                <div class="academy-card">
+                    <h4>🧬 Body & Biology</h4>
+                    <ul>
+                        <li>Ayurveda & Doshas</li>
+                        <li>Hormonal Body Types</li>
+                        <li>Nutritional Psychiatry</li>
+                    </ul>
+                    <a href="#" class="btn-outline">Explore</a>
+                </div>
+
+                <div class="academy-card">
+                    <h4>⚡ Energy & Breath</h4>
+                    <ul>
+                        <li>Pranic Healing Basics</li>
+                        <li>Breathwork & Qigong</li>
+                    </ul>
+                    <a href="#" class="btn-outline">Explore</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. GENERAL FAQ -->
+    <section class="section-padding faq-section">
+        <h2 style="text-align: center;">General Questions</h2>
+        <details>
+            <summary>How do I pay?</summary>
+            <p>We accept <strong>Stripe (Credit Card)</strong> and <strong>Interac e-Transfer</strong> (Canada). Crypto (USDT) is also available.</p>
+        </details>
+        <details>
+            <summary>Is this a medical treatment?</summary>
+            <p>No. We provide complementary therapy. Please consult your doctor for medical conditions.</p>
+        </details>
+        <details>
+            <summary>Cancellation Policy?</summary>
+            <p>24 hours notice required for rescheduling.</p>
+        </details>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Rostani Integrative Health</p>
+        <p style="font-size: 0.7rem; margin-top: 10px;">Designed by Shadi Servat</p>
+    </footer>
+
 </body>
 </html>

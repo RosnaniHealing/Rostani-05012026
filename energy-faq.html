@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <title>FAQ | Rostani Integrative Health</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- Color Palette --- */
+        :root {
+            --bg-body: #FDFCF8;
+            --text-main: #2C3E50;
+            --accent-primary: #4A6741; /* سبز سدری */
+            --accent-light: #E9F1EA;
+            --gold: #C5A065;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Montserrat', sans-serif; background-color: var(--bg-body); color: var(--text-main); line-height: 1.8; }
+        .container { max-width: 800px; margin: 0 auto; padding: 0 20px; }
+        
+        /* Typography */
+        h1, h2, h3 { font-family: 'Cormorant Garamond', serif; color: var(--accent-primary); font-weight: 700; }
+        
+        /* Navigation (Simplified) */
+        header { padding: 20px 0; border-bottom: 1px solid #eee; background: white; position: sticky; top: 0; z-index: 100; }
+        .nav-flex { display: flex; justify-content: space-between; align-items: center; max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+        .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: bold; color: var(--accent-primary); text-decoration: none; }
+        .back-link { font-size: 0.9rem; text-decoration: none; color: #777; }
+        .back-link:hover { color: var(--accent-primary); }
+
+        /* Hero */
+        .faq-hero { text-align: center; padding: 80px 0 50px; background-color: var(--accent-light); margin-bottom: 40px; }
+        .faq-hero h1 { font-size: 3rem; margin-bottom: 10px; }
+        .faq-hero p { font-size: 1.1rem; color: #555; }
+
+        /* FAQ Sections */
+        .faq-category { margin-bottom: 60px; }
+        .faq-category h2 { font-size: 1.8rem; margin-bottom: 20px; border-bottom: 2px solid var(--gold); display: inline-block; padding-bottom: 5px; }
+
+        /* Accordion Style */
+        details {
+            background: white;
+            margin-bottom: 15px;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #eee;
+            transition: all 0.3s ease;
+        }
+        details:hover { box-shadow: 0 5px 15px rgba(0,0,0,0.03); border-color: var(--accent-primary); }
+        details[open] { border-left: 5px solid var(--accent-primary); }
+        
+        summary {
+            font-weight: 600;
+            font-size: 1.05rem;
+            cursor: pointer;
+            list-style: none; /* مخفی کردن مثلث پیش‌فرض */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        /* آیکون مثبت و منفی */
+        summary::after { content: '+'; font-size: 1.5rem; color: var(--gold); font-weight: 300; }
+        details[open] summary::after { content: '-'; color: var(--accent-primary); }
+
+        .answer { margin-top: 15px; color: #555; padding-left: 10px; border-left: 2px solid #eee; }
+
+        /* Footer */
+        footer { text-align: center; padding: 40px; border-top: 1px solid #ddd; margin-top: 50px; font-size: 0.8rem; color: #888; }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="nav-flex">
+            <a href="index.html" class="logo">ROSTANI.</a>
+            <a href="index.html" class="back-link">← Back to Home</a>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <div class="faq-hero">
+        <div class="container">
+            <h1>Energy Healing Guide</h1>
+            <p>Everything you need to know about Pranic Healing sessions, protocols, and science.</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+
+        <!-- Category 1: The Basics -->
+        <div class="faq-category">
+            <h2>The Basics</h2>
+            
+            <details>
+                <summary>What exactly is Pranic Healing?</summary>
+                <div class="answer">
+                    No, it is not a massage. Pranic Healing is a <strong>"No-Touch"</strong> energy science. We do not touch your physical body; instead, we work on your "Energy Body" (Bio-field). It operates on natural laws to cleanse and energize your system using <em>Prana</em> (Life Force).
+                </div>
+            </details>
+
+            <details>
+                <summary>Is this religious or magic?</summary>
+                <div class="answer">
+                    Absolutely not. Pranic Healing is a <strong>technology of energy</strong>. Just as you don't need a specific religion to use Wi-Fi or gravity, you don't need to change your beliefs to receive energy. It is purely scientific and secular.
+                </div>
+            </details>
+
+            <details>
+                <summary>How is it different from Reiki?</summary>
+                <div class="answer">
+                    In Reiki, the practitioner is mostly a channel for energy. In Pranic Healing, we are very <strong>active and specific</strong>. We first "Scan" the aura, then rigorously "Cleanse" the dirty energy (like surgery), and finally "Energize" with specific color frequencies. It is more engineered and precise.
+                </div>
+            </details>
+        </div>
+
+        <!-- Category 2: Remote Healing Logic -->
+        <div class="faq-category">
+            <h2>How Remote Healing Works</h2>
+            
+            <details>
+                <summary>How can you heal me from another country?</summary>
+                <div class="answer">
+                    Energy follows thought and is governed by Quantum Physics, not Newtonian physics. Based on the principle of <strong>Quantum Entanglement</strong>, when we synchronize our intention, physical distance becomes irrelevant. Just like a mobile phone transmits voice wirelessly, we transmit energy through the bio-field network.
+                </div>
+            </details>
+
+            <details>
+                <summary>Do I need to be on a video call?</summary>
+                <p class="answer">
+                    No. To help you reach the deepest state of relaxation (Theta state), we avoid screens. We coordinate via text, and you simply lie down in your private space without the distraction of a camera.
+                </p>
+            </details>
+        </div>
+
+        <!-- Category 3: What to Expect -->
+        <div class="faq-category">
+            <h2>Your Experience</h2>
+            
+            <details>
+                <summary>What will I feel during the session?</summary>
+                <div class="answer">
+                    It varies. Some feel <strong>heat, tingling, or a gentle electric flow</strong>. Others feel a pleasant heaviness or emotional release (tears). Some feel <strong>nothing physical</strong> but fall into a deep sleep. All are valid signs that the energy is working.
+                </div>
+            </details>
+
+            <details>
+                <summary>What if I fall asleep?</summary>
+                <div class="answer">
+                    That’s perfect! Sleep indicates your conscious mind has stepped aside, allowing your body to accept the healing fully. I will leave a message for you when the session is done.
+                </div>
+            </details>
+
+            <details>
+                <summary>Can I have a "Healing Crisis"?</summary>
+                <div class="answer">
+                    Sometimes (in ~10% of cases), you might feel tired, have a mild headache, or feel emotional after a session. This is called a <strong>Healing Crisis</strong> (Detox). It means your body is purging toxins. It is temporary and clears up with rest and water.
+                </div>
+            </details>
+        </div>
+
+        <!-- Category 4: Protocols -->
+        <div class="faq-category">
+            <h2>Protocols & Rules</h2>
+            
+            <details>
+                <summary>Why no showering for 8 hours?</summary>
+                <div class="answer">
+                    Fresh energy applied to your aura is like "wet paint." It takes time to be fully absorbed by your chakras. Water washes away this subtle energy layer before it sets, reducing the treatment's effectiveness.
+                </div>
+            </details>
+
+            <details>
+                <summary>Why wear White? Why avoid Blue?</summary>
+                <div class="answer">
+                    <strong>White</strong> reflects all colors, allowing the healing energy to penetrate without resistance. <br>
+                    <strong>Blue, Black, or Leather</strong> act as insulators or absorb energy indiscriminately, which can interfere with the scanning process. We want zero resistance.
+                </div>
+            </details>
+        </div>
+
+        <!-- Category 5: Medical & Planning -->
+        <div class="faq-category">
+            <h2>Safety & Planning</h2>
+            
+            <details>
+                <summary>Is this a replacement for my medication?</summary>
+                <div class="answer">
+                    No. Pranic Healing is a <strong>Complementary Therapy</strong>. We work on the Energy Body, while your doctor works on the Physical Body. Please do not stop your prescribed medication without consulting your physician.
+                </div>
+            </details>
+
+            <details>
+                <summary>Is it safe for pregnancy or heart conditions?</summary>
+                <div class="answer">
+                    It is safe, but specific techniques must be avoided. That is why our <strong>Intake Form</strong> asks about pregnancy or pacemakers—so I can adjust the protocol to be gentle and safe for you.
+                </div>
+            </details>
+
+            <details>
+                <summary>How many sessions do I need?</summary>
+                <div class="answer">
+                    For simple stress, 1 session is great. <br>
+                    However, for deep-seated issues like <strong>Chronic Anxiety, Brain Fog, Depression, or Long-term Pain</strong>, layers of energetic congestion have built up over years. One session provides relief, but our **21-Session Journey** is designed to re-train your energy system for lasting transformation.
+                </div>
+            </details>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Rostani Integrative Health</p>
+    </footer>
+
+</body>
+</html>

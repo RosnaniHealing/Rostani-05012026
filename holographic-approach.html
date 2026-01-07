@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <title>The Holographic Approach | Rostani Method</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- Rostani Color Palette --- */
+        :root {
+            --bg-body: #FDFCF8;
+            --text-main: #2C3E50;
+            --text-light: #555;
+            --accent-primary: #4A6741;
+            --accent-light: #E9F1EA;
+            --gold: #C5A065;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            font-family: 'Montserrat', sans-serif; 
+            background-color: var(--bg-body); 
+            color: var(--text-main); 
+            line-height: 1.9; /* فضای بیشتر بین خطوط برای خوانایی */
+        }
+
+        h1, h2, h3, h4 { 
+            font-family: 'Cormorant Garamond', serif; 
+            color: var(--accent-primary); 
+            font-weight: 700;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        p { margin-bottom: 20px; font-size: 1.05rem; color: var(--text-light); }
+        strong { color: var(--accent-primary); }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 20px; } /* عرض متن باریک‌تر برای مطالعه راحت */
+
+        /* --- Header --- */
+        header { padding: 20px 0; border-bottom: 1px solid #eee; background: white; position: sticky; top: 0; z-index: 100; }
+        .nav-flex { display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: 0 auto; padding: 0 20px;}
+        .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: bold; color: var(--accent-primary); text-decoration: none; }
+        .back-btn { font-size: 0.9rem; text-decoration: none; color: var(--text-light); display: flex; align-items: center; gap: 5px; }
+        .back-btn:hover { color: var(--accent-primary); }
+
+        /* --- Article Header --- */
+        .article-header { text-align: center; padding: 80px 0 40px; }
+        .article-tag { background: var(--accent-light); color: var(--accent-primary); padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; }
+        .article-title { font-size: 3.5rem; line-height: 1.2; margin-top: 20px; }
+        .article-subtitle { font-size: 1.3rem; color: var(--gold); font-style: italic; font-family: 'Cormorant Garamond', serif; }
+
+        /* --- Content Blocks --- */
+        .quote-box {
+            border-left: 4px solid var(--gold);
+            padding-left: 25px;
+            margin: 40px 0;
+            font-style: italic;
+            font-size: 1.4rem;
+            color: var(--accent-primary);
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        /* --- 4 Dimensions Grid --- */
+        .dimension-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin: 50px 0; }
+        .dimension-card { 
+            background: white; padding: 30px; border-radius: 8px; border: 1px solid #eee; 
+            transition: 0.3s;
+        }
+        .dimension-card:hover { border-color: var(--accent-primary); transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .dim-icon { font-size: 2rem; display: block; margin-bottom: 10px; }
+
+        /* --- Case Study Box --- */
+        .case-study {
+            background-color: var(--accent-light);
+            padding: 40px;
+            border-radius: 12px;
+            margin: 60px 0;
+        }
+        .case-study h3 { margin-top: 0; color: var(--accent-primary); }
+        .case-list li { margin-bottom: 10px; list-style: none; position: relative; padding-left: 20px; }
+        .case-list li::before { content: "✔"; color: var(--accent-primary); position: absolute; left: 0; font-weight: bold; }
+        .case-list li.cross::before { content: "✗"; }
+
+        /* --- Footer CTA --- */
+        .article-footer { text-align: center; padding: 80px 0; border-top: 1px solid #eee; margin-top: 60px; }
+        .cta-btn {
+            display: inline-block; padding: 15px 40px; background-color: var(--accent-primary); color: white;
+            border-radius: 50px; font-weight: bold; text-decoration: none; letter-spacing: 1px; margin-top: 20px;
+        }
+        .cta-btn:hover { background-color: var(--gold); }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .article-title { font-size: 2.5rem; }
+            .dimension-grid { grid-template-columns: 1fr; }
+            .nav-flex { flex-direction: column; gap: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <div class="nav-flex">
+            <!-- لینک برگشت به صفحه اصلی -->
+            <a href="index.html" class="logo">ROSTANI.</a>
+            <a href="index.html" class="back-btn">← Back to Home</a>
+        </div>
+    </header>
+
+    <!-- Article Content -->
+    <article class="container">
+        
+        <!-- Header -->
+        <div class="article-header">
+            <span class="article-tag">Our Methodology</span>
+            <h1 class="article-title">Beyond the Symptom: The Holographic Approach</h1>
+            <p class="article-subtitle">Why treating the part requires seeing the whole.</p>
+        </div>
+
+        <!-- Intro -->
+        <p>In our modern world, healthcare is often fragmented. If you have anxiety, you see a psychologist. If you have stomach pain, you see a doctor. If you feel lost, you hire a life coach. <strong>But what happens when the anxiety causes the stomach pain, and the stomach pain fuels the feeling of being lost?</strong></p>
+        
+        <p>Most treatments fail because they treat the <em>symptom</em>, not the <em>system</em>. At <strong>Rostani Integrative Health</strong>, we believe that you are not a machine made of separate parts. You are a unified, multidimensional field of intelligence. To heal one part, we must look at the whole.</p>
+
+        <!-- What is Holographic -->
+        <h2>What is a "Holographic" View?</h2>
+        <p>The term comes from the physics of a hologram. Unlike a standard photograph, if you cut a holographic film into small pieces, every single piece still contains the <strong>whole image</strong>.</p>
+        
+        <div class="quote-box">
+            "The whole is contained in the part. Your entire life story is encoded in your Here and Now."
+        </div>
+
+        <p>In therapy, this principle is profound. It means that your childhood traumas, your limiting beliefs, and your future potential are not just "in the past." They are present right now: in the way you breathe, in the micro-tensions of your muscles, and in the energetic congestion of your chakras.</p>
+        <p>Instead of spending years digging into the past, the Holographic Approach decodes these living patterns in the present moment to shift the entire system.</p>
+
+        <!-- Case Study -->
+        <div class="case-study">
+            <h3>Case Example: Treating Anxiety</h3>
+            <p>To understand the power of this method, let’s look at how we treat Anxiety compared to traditional methods:</p>
+            <ul class="case-list">
+                <li class="cross"><strong>Traditional Therapy:</strong> Asks "Why are you anxious?" (Focus on past).</li>
+                <li class="cross"><strong>Traditional Medicine:</strong> Prescribes pills to suppress symptoms.</li>
+                <li><strong>The Rostani Method (Simultaneous Attack):</strong>
+                    <br>1. <strong>Energy:</strong> We scan and cleanse the Solar Plexus Chakra.
+                    <br>2. <strong>Body:</strong> We use Breathwork to signal safety to the Vagus Nerve.
+                    <br>3. <strong>Mind:</strong> We analyze the Perfectionist Archetype driving the anxiety.
+                    <br>4. <strong>Will:</strong> We set a micro-goal for tomorrow.
+                </li>
+            </ul>
+            <p style="margin-top: 15px; font-weight: bold;">The result? The anxiety isn't just "managed"; the system is upgraded.</p>
+        </div>
+
+        <!-- Conclusion -->
+        <h2>Return to Wholeness</h2>
+        <p>You are vast. You are complex. And you deserve a healing path that honors all of you.</p>
+        <p>At Rostani, we don't fix you—because you are not broken. We simply remove the layers of dust (mental, physical, energetic) so that your authentic self can shine through.</p>
+
+    </article>
+
+    <!-- Footer CTA -->
+    <div class="article-footer">
+        <h3>Are you ready to see the whole picture?</h3>
+        <p>Book your first Integrative Session today.</p>
+        <!-- 👇 لینک رزرو را اینجا بگذار 👇 -->
+        <a href="index.html#services" class="cta-btn">Book an Integrative Session</a>
+    </div>
+
+</body>
+</html>
