@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <title>About Shadi Servat | Rostani Founder</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-body: #FDFCF8;
+            --text-main: #2C3E50;
+            --accent-primary: #4A6741;
+            --gold: #C5A065;
+        }
+        body { font-family: 'Montserrat', sans-serif; background: var(--bg-body); color: var(--text-main); line-height: 1.9; margin: 0; }
+        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+        
+        h1, h2, h3 { font-family: 'Cormorant Garamond', serif; color: var(--accent-primary); }
+        h1 { font-size: 3.5rem; text-align: center; margin-bottom: 10px; }
+        .subtitle { text-align: center; font-size: 1.2rem; color: #777; margin-bottom: 60px; font-style: italic; }
+        
+        /* Section Styles */
+        .bio-section { margin-bottom: 60px; }
+        .bio-text { font-size: 1.1rem; color: #444; text-align: justify; }
+        
+        /* Credentials Grid */
+        .cred-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 20px; }
+        .cred-card { background: white; padding: 30px; border-left: 4px solid var(--gold); box-shadow: 0 5px 20px rgba(0,0,0,0.03); }
+        .cred-card h4 { margin: 0 0 10px 0; font-size: 1.2rem; }
+
+        /* Research List */
+        .research-item { background: #E9F1EA; padding: 20px; border-radius: 8px; margin-bottom: 15px; display: flex; align-items: center; gap: 15px; }
+        .icon { font-size: 1.5rem; }
+        
+        /* Photo */
+        .profile-photo { 
+            width: 200px; height: 200px; margin: 0 auto 30px; 
+            background-image: url('YOUR_PHOTO_URL_HERE'); /* عکس خودت */
+            background-size: cover; background-position: center; 
+            border-radius: 50%; border: 5px solid white; box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        /* Nav */
+        .back-link { display: block; text-align: center; margin-bottom: 40px; text-decoration: none; color: #888; }
+        .back-link:hover { color: var(--accent-primary); }
+
+        @media (max-width: 768px) { .cred-grid { grid-template-columns: 1fr; } h1 { font-size: 2.5rem; } }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to Home</a>
+        
+        <!-- Profile Photo -->
+        <div class="profile-photo"></div>
+
+        <h1>Shadi Servat</h1>
+        <p class="subtitle">The Architect of the Holographic Method</p>
+
+        <!-- 1. The Story -->
+        <div class="bio-section">
+            <h2>My Journey: From Mind to Energy</h2>
+            <div class="bio-text">
+                <p>I didn’t start as a healer. I started as a scientist of the mind.</p>
+                <p>Five years ago, armed with a <strong>Master’s degree in Personality Psychology</strong> and an <strong>ICF Coaching certification</strong>, I began helping clients navigate their lives. I saw breakthroughs, but I also saw limits. Clients would understand their trauma intellectually ("I know why I am anxious"), but their bodies remained stuck in fight-or-flight mode.</p>
+                <p>This gap led me to explore the "Third Dimension": <strong>Energy</strong>. <br>
+                For the past two years, I have immersed myself in the study of <strong>Pranic Healing</strong> and Biofield Science. I realized that true transformation happens only when we align the Mind (Psychology) with the Body's subtle energy system.</p>
+                <p>Today, as the founder of <strong>Rostani</strong>, I integrate these worlds. I am not a guru; I am a mirror helping you decode your own holographic pattern.</p>
+            </div>
+        </div>
+
+        <!-- 2. Credentials -->
+        <div class="bio-section">
+            <h2>Professional Credentials</h2>
+            <div class="cred-grid">
+                <div class="cred-card">
+                    <h4>🎓 Academic & Coaching</h4>
+                    <p>• M.A. in Personality Psychology</p>
+                    <p>• ICF Associate Certified Coach (ACC)</p>
+                    <p>• 5+ Years Clinical Experience</p>
+                </div>
+                <div class="cred-card">
+                    <h4>⚡ Energy & Holistic</h4>
+                    <p>• Advanced Pranic Healer</p>
+                    <p>• Pranic Psychotherapist</p>
+                    <p>• Trained in India (GMCKS Foundation)</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. Research -->
+        <div class="bio-section">
+            <h2>Research & Publications</h2>
+            <p>My methodology is grounded in rigorous research.</p>
+            
+            <div class="research-item">
+                <span class="icon">📄</span>
+                <div>
+                    <strong>White Paper: The Rostani Method</strong><br>
+                    <small>Integrating Personality Psychology and Biofield Therapy (2025).</small>
+                </div>
+            </div>
+
+            <div class="research-item">
+                <span class="icon">🎓</span>
+                <div>
+                    <strong>Academic Thesis</strong><br>
+                    <small>Comparative Study: The Efficacy of Group Coaching on Resilience & Procrastination (ANCOVA Analysis).</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div style="text-align: center; margin-top: 60px; padding-top: 40px; border-top: 1px solid #eee;">
+            <p>Ready to work together?</p>
+            <a href="index.html#services" style="background: var(--accent-primary); color: white; padding: 10px 25px; text-decoration: none; border-radius: 50px; font-weight: bold;">View My Services</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
