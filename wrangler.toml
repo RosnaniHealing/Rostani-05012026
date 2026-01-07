@@ -1,0 +1,7 @@
+name = "rostani-integrative-health"
+compatibility_date = "2026-01-07"
+
+[site]
+# Specify the directory containing the built assets
+bucket = "./dist"
+entry-point = "./dist"
